@@ -7,6 +7,7 @@ gem "bootsnap", require: false
 gem "bootstrap", "~> 4.1.3"
 gem "font-awesome-sass", "~> 4.4.0"
 gem "haml"
+gem "execjs"
 gem "image_processing", ">= 1.2"
 gem "importmap-rails"
 gem "jquery-rails"
