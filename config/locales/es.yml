@@ -130,7 +130,7 @@ es:
               too_long: debe tener menos de 20 caracteres
             description:
               blank: no puede estar vacío
-              too_long: debe tener menos de 40 caracteres
+              too_long: debe tener menos de 200 caracteres
             price:
               blank: no puede estar vacío
             photography:

@@ -20,7 +20,7 @@ module Lenguajes1
       allow do
         origins 'http://localhost:4000', 'http://localhost:8100'
         resource '*', headers: :any, methods: :any,
-          credentials: true
+         credentials: true
       end
     end
   end

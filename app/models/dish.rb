@@ -1,8 +1,8 @@
 class Dish < ApplicationRecord
   has_one_attached :photography
 
-  validates :name, presence: true, length: { maximum: 20 }
-  validates :description, presence: true, length: { maximum: 40 }
+  validates :name, presence: true, length: { maximum: 40 }
+  validates :description, presence: true, length: { maximum: 200 }
   validates :price, presence: true
   validates :state, inclusion: { in: [true, false] }
   validates :photography, presence: true

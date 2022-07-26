@@ -145,6 +145,7 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.2)
     msgpack (1.5.3)
     net-imap (0.2.3)
@@ -162,7 +163,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.7-x86_64-linux)
+    nokogiri (1.13.7)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pg (1.4.1)
     popper_js (1.16.0)
@@ -306,7 +308,6 @@ DEPENDENCIES
   capybara
   debug
   erb2haml
-  execjs
   font-awesome-sass (~> 4.4.0)
   haml
   image_processing (>= 1.2)

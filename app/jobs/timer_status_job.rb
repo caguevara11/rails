@@ -6,7 +6,7 @@ class TimerStatusJob < ApplicationJob
     timers = Timers::Group.new
     time_in_minutes = order.order_state.time_in_minutes
     temp = 0
-    cronometer = timers.every(time_in_minutes * 10) { 
+    cronometer = timers.every(time_in_minutes * 20) { 
       time_in_minutes = order.order_state.time_in_minutes
       case temp 
       when 0
