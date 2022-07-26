@@ -1,5 +1,5 @@
 require "active_support/core_ext/integer/time"
-
+Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -7,8 +7,7 @@ Rails.application.configure do
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-
-  # Do not eager load code on boot.
+  # Do not eager load code on boot.agga
   config.eager_load = false
 
   # Show full error reports.
@@ -25,7 +24,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}",
     }
   else
     config.action_controller.perform_caching = false
@@ -58,6 +57,8 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

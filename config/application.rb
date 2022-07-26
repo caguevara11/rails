@@ -6,17 +6,22 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module RubyRailsPostgres
+module Lenguajes1
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    I18n.load_path += Dir[Rails.root.join("config", "locales", "*.{yml}")]
+    I18n.default_locale = :es
+
+    config.time_zone = 'Central America'
+    config.active_record.default_timezone = :local
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://localhost:4000', 'http://localhost:8100'
+        resource '*', headers: :any, methods: :any,
+          credentials: true
+      end
+    end
   end
 end
